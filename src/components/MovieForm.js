@@ -9,7 +9,7 @@ class MovieForm extends React.Component {
   }
 
   handleSubmit() {
-    const { onSubmi } = this.props;
+    const { onSubmit } = this.props;
     onSubmit(this.state);
   }
 
