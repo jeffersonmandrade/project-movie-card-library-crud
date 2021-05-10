@@ -22,7 +22,6 @@ class EditMovie extends Component {
     const { match: { params: { id } } } = this.props;
 
     const movie = await movieAPI.getMovie(id);
-    console.log(movie);
     this.setState({
       status: 'loadingIsNot',
       movie,
@@ -30,7 +29,6 @@ class EditMovie extends Component {
   }
 
   handleSubmit = (updatedMovie) => {
-    const { updateMovie } = movieAPI;
     updateMovie(updatedMovie).then(() => {
       this.setState({
         shouldRedirect: true,
